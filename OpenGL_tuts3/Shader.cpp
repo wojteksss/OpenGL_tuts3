@@ -10,7 +10,6 @@ Shader::Shader(const std::string& filePath)
 {
     ShaderProgramSource source = ParseShader(filePath);
     m_RendererID = CreateShader(source.VertexSource, source.FragmentSource);
-    std::cout <<  "dupka" << std::endl;
 }
 
 Shader::~Shader()
@@ -30,7 +29,7 @@ ShaderProgramSource Shader::ParseShader(const std::string& filePath)
     std::string line;
     std::stringstream ss[2];
     ShaderType type = ShaderType::NONE;
-    
+
     while (getline(stream, line))
     {
         if(line.find("#Shader") != std::string::npos)
@@ -118,10 +117,10 @@ void Shader::setUniform4f(const std::string& name, float v0, float v1, float v2,
     GLCall(glUniform4f(GetUniformLocation(name), v0, v1, v2, v3));
 }
 
-//void Shader::setUniformMat4f(const std::string& name, const glm::mat4& matrix)
-//{
-//    GLCall(glUniformMatrix4fv(GetUniformLocation(name), 1, GL_FALSE, &matrix[0][0]));
-//}
+void Shader::setUniformMat4f(const std::string& name, const glm::mat4& matrix)
+{
+    GLCall(glUniformMatrix4fv(GetUniformLocation(name), 1, GL_FALSE, &matrix[0][0]));
+}
 
 int Shader::GetUniformLocation(const std::string& name)
 {

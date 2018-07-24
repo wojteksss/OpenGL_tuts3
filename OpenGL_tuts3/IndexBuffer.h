@@ -1,4 +1,4 @@
-#pragma once 
+#pragma once
 
 class IndexBuffer
 {
@@ -14,3 +14,4 @@ public:
     
     inline unsigned int GetCount() const { return m_Count; }
 };
+
