@@ -1,15 +1,19 @@
-//
-//  main.cpp
-//  OpenGL_tuts3
-//
-//  Created by Wojtek Pilwinski on 24/07/2018.
-//  Copyright © 2018 wojteksss. All rights reserved.
-//
-
 #include <iostream>
+#include <chrono>
+#include <thread>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+#define GLEW_STATIC
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+
+const GLint WIDTH = 800, HEIGHT = 600;
+void printGL_Version();
+const float fWIDTH = WIDTH, fHEIGHT = 600;
+
+
+
+int main(void)
+{
     return 0;
 }
+

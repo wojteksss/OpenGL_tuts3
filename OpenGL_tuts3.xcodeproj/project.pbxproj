@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		F595641A2107953800DE8E56 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F59564192107953800DE8E56 /* main.cpp */; };
+		F59564222107967100DE8E56 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F59564212107967100DE8E56 /* OpenGL.framework */; };
+		F59564242107969400DE8E56 /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F59564232107969400DE8E56 /* libGLEW.2.1.0.dylib */; };
+		F5956426210796A900DE8E56 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F5956425210796A900DE8E56 /* libglfw.3.2.dylib */; };
+		F5956434210798FC00DE8E56 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5956427210798FA00DE8E56 /* Texture.cpp */; };
+		F5956435210798FC00DE8E56 /* VertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5956429210798FA00DE8E56 /* VertexArray.cpp */; };
+		F5956436210798FC00DE8E56 /* VertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F595642A210798FA00DE8E56 /* VertexBuffer.cpp */; };
+		F5956437210798FC00DE8E56 /* IndexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F595642C210798FB00DE8E56 /* IndexBuffer.cpp */; };
+		F5956438210798FC00DE8E56 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F595642E210798FB00DE8E56 /* Renderer.cpp */; };
+		F5956439210798FC00DE8E56 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F595642F210798FB00DE8E56 /* Shader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +34,22 @@
 /* Begin PBXFileReference section */
 		F59564162107953800DE8E56 /* OpenGL_tuts3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGL_tuts3; sourceTree = BUILT_PRODUCTS_DIR; };
 		F59564192107953800DE8E56 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F59564212107967100DE8E56 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		F59564232107969400DE8E56 /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.1.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.1.0/lib/libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
+		F5956425210796A900DE8E56 /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
+		F5956427210798FA00DE8E56 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
+		F5956428210798FA00DE8E56 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		F5956429210798FA00DE8E56 /* VertexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VertexArray.cpp; sourceTree = "<group>"; };
+		F595642A210798FA00DE8E56 /* VertexBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VertexBuffer.cpp; sourceTree = "<group>"; };
+		F595642B210798FB00DE8E56 /* VertexBufferLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VertexBufferLayout.h; sourceTree = "<group>"; };
+		F595642C210798FB00DE8E56 /* IndexBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IndexBuffer.cpp; sourceTree = "<group>"; };
+		F595642D210798FB00DE8E56 /* VertexArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VertexArray.h; sourceTree = "<group>"; };
+		F595642E210798FB00DE8E56 /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
+		F595642F210798FB00DE8E56 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
+		F5956430210798FB00DE8E56 /* IndexBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexBuffer.h; sourceTree = "<group>"; };
+		F5956431210798FC00DE8E56 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
+		F5956432210798FC00DE8E56 /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		F5956433210798FC00DE8E56 /* VertexBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VertexBuffer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +57,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5956426210796A900DE8E56 /* libglfw.3.2.dylib in Frameworks */,
+				F59564242107969400DE8E56 /* libGLEW.2.1.0.dylib in Frameworks */,
+				F59564222107967100DE8E56 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +71,7 @@
 			children = (
 				F59564182107953800DE8E56 /* OpenGL_tuts3 */,
 				F59564172107953800DE8E56 /* Products */,
+				F59564202107967100DE8E56 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +87,31 @@
 			isa = PBXGroup;
 			children = (
 				F59564192107953800DE8E56 /* main.cpp */,
+				F595642C210798FB00DE8E56 /* IndexBuffer.cpp */,
+				F5956430210798FB00DE8E56 /* IndexBuffer.h */,
+				F595642E210798FB00DE8E56 /* Renderer.cpp */,
+				F5956432210798FC00DE8E56 /* Renderer.h */,
+				F595642F210798FB00DE8E56 /* Shader.cpp */,
+				F5956428210798FA00DE8E56 /* Shader.h */,
+				F5956427210798FA00DE8E56 /* Texture.cpp */,
+				F5956431210798FC00DE8E56 /* Texture.h */,
+				F5956429210798FA00DE8E56 /* VertexArray.cpp */,
+				F595642D210798FB00DE8E56 /* VertexArray.h */,
+				F595642A210798FA00DE8E56 /* VertexBuffer.cpp */,
+				F5956433210798FC00DE8E56 /* VertexBuffer.h */,
+				F595642B210798FB00DE8E56 /* VertexBufferLayout.h */,
 			);
 			path = OpenGL_tuts3;
+			sourceTree = "<group>";
+		};
+		F59564202107967100DE8E56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5956425210796A900DE8E56 /* libglfw.3.2.dylib */,
+				F59564232107969400DE8E56 /* libGLEW.2.1.0.dylib */,
+				F59564212107967100DE8E56 /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +170,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5956438210798FC00DE8E56 /* Renderer.cpp in Sources */,
+				F5956437210798FC00DE8E56 /* IndexBuffer.cpp in Sources */,
 				F595641A2107953800DE8E56 /* main.cpp in Sources */,
+				F5956436210798FC00DE8E56 /* VertexBuffer.cpp in Sources */,
+				F5956439210798FC00DE8E56 /* Shader.cpp in Sources */,
+				F5956435210798FC00DE8E56 /* VertexArray.cpp in Sources */,
+				F5956434210798FC00DE8E56 /* Texture.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +234,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -228,6 +287,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
@@ -238,6 +298,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glew/2.1.0/lib,
+					/usr/local/Cellar/glfw/3.2.1/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -246,6 +312,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glew/2.1.0/lib,
+					/usr/local/Cellar/glfw/3.2.1/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
