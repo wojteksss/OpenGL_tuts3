@@ -60,17 +60,17 @@ int main(void)
     
     printGL_Version();
     
-    GLCall(glViewport(0, 0, screenWidth, screenHeight));
+//    GLCall(glViewport(0, 0, screenWidth, screenHeight));
     
     
     
     GLfloat positions[] =
     {
         //position
-        100.0f,  100.0f,    0.0f, 0.0f,
-        200.0f,  100.0f,    1.0f, 0.0f,
-        200.0f,  200.0f,    1.0f, 1.0f,
-        100.0f,  200.0f,    0.0f, 1.0f
+        -50.0f,  -50.0f,    0.0f, 0.0f,
+         50.0f,  -50.0f,    1.0f, 0.0f,
+         50.0f,   50.0f,    1.0f, 1.0f,
+        -50.0f,   50.0f,    0.0f, 1.0f
     };
     
     unsigned int indices[] =
@@ -93,7 +93,7 @@ int main(void)
     IndexBuffer ib(indices, 6);
     
     glm::mat4 proj = glm::ortho(0.0f, fWIDTH, 0.0f, fHEIGHT, -1.0f, 1.0f);
-    glm::mat4 view = glm::translate(glm::mat4(1.0f), glm::vec3(-100, 0, 0));
+    glm::mat4 view = glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0));
     
     Shader shader("resources/shaders/basic.h");
     shader.Bind();
@@ -119,11 +119,11 @@ int main(void)
     //    float increaseY=5.0f;
     //    float slideY=0.0f;
     
-    glm::vec3 translation(200, 200, 0);
+    glm::vec3 translationA(200, 200, 0);
+    glm::vec3 translationB(400, 150, 0);
     
     while (!glfwWindowShouldClose(window))
     {
-        GLCall(glfwPollEvents());
         
         GLCall(glClearColor(0.2f, 0.3f, 0.3f, 1.0f));
         
@@ -132,17 +132,27 @@ int main(void)
         
         ImGui_ImplGlfwGL3_NewFrame();
         
-        glm::mat4 model = glm::translate(glm::mat4(1.0f), translation);
-        glm::mat4 mvp = proj * view * model;
-        
-        shader.Bind();
-        shader.setUniformMat4f("u_MVP", mvp);
-        
-        renderer.Draw(va, ib, shader);
+        {
+            glm::mat4 model = glm::translate(glm::mat4(1.0f), translationA);
+            glm::mat4 mvp = proj * view * model;
+            shader.Bind();
+            shader.setUniformMat4f("u_MVP", mvp);
+            
+            renderer.Draw(va, ib, shader);
+        }
+        {
+            glm::mat4 model = glm::translate(glm::mat4(1.0f), translationB);
+            glm::mat4 mvp = proj * view * model;
+            shader.Bind();
+            shader.setUniformMat4f("u_MVP", mvp);
+            
+            renderer.Draw(va, ib, shader);
+        }
         
         
         {
-            ImGui::SliderFloat3("Translation", &translation.x, 0.0f, fWIDTH);
+            ImGui::SliderFloat3("Translation A", &translationA.x, 0.0f, fWIDTH);
+            ImGui::SliderFloat3("Translation B", &translationB.x, 0.0f, fWIDTH);
             ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
         }
         
@@ -161,6 +171,7 @@ int main(void)
         ImGui_ImplGlfwGL3_RenderDrawData(ImGui::GetDrawData());
         
         glfwSwapBuffers(window);
+        GLCall(glfwPollEvents());
     }
     
     ImGui_ImplGlfwGL3_Shutdown();
